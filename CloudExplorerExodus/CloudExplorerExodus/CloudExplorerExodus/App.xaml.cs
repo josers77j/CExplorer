@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using CloudExplorerExodus.View;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace CloudExplorerExodus
@@ -11,7 +12,7 @@ namespace CloudExplorerExodus
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NotasViewPage();
         }
 
         protected override void OnStart()
