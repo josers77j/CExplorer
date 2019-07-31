@@ -30,7 +30,16 @@ namespace CloudExplorerExodus.View
 
         private void Mostrarbtn_Clicked(object sender, EventArgs e)
         {
+            LVNotas.ItemSelected = _fileName;
+        }
 
+        private void Eliminarbtn_Clicked(object sender, EventArgs e)
+        {
+            if(File.Exists(_fileName))
+            {
+                File.Delete(_fileName);
+            }
+            ENota.Text = string.Empty;
         }
     }
 }

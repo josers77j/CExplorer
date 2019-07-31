@@ -8,7 +8,19 @@
             <Label Text="pon la nota we"/>
             <Editor Placeholder="la nota ptm" x:Name="ENota"/>
             <Button x:Name="btnNota" Clicked="BtnNota_Clicked" Text="Guardar la wea"/>
-            <Button x:Name="Mostrarbtn" Clicked="Mostrarbtn_Clicked"/>
+            <Button x:Name="Mostrarbtn" Clicked="Mostrarbtn_Clicked" Text="mostrar"/>
+            <Button x:Name="Eliminarbtn" Clicked="Eliminarbtn_Clicked" Text="eliminar"/>
+            
+            <ListView x:Name="LVNotas">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding ENota}"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        
         </StackLayout>
 
     </ContentPage.Content>
